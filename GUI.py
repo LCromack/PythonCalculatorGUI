@@ -7,7 +7,6 @@ def calculate(*args):
         Num1 = float(num1.get())
         Num2 = float(num2.get())
         Operator = str(opp.get())
-        # result.set(int(0.3048 * value * 10000.0 + 0.5)/10000.0)
         result.set(calculation(Num1, Num2, Operator))
     except ValueError:
         pass
