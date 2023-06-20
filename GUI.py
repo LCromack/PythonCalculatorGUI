@@ -20,23 +20,25 @@ mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
 
+# Data entry through text boxes
 num1 = StringVar()
 num1_entry = ttk.Entry(mainframe, width=14, textvariable=num1)
 num1_entry.grid(column=2, row=1, sticky=(W, E))
-
 num2 = StringVar()
 num2_entry = ttk.Entry(mainframe, width=14, textvariable=num2)
 num2_entry.grid(column=2, row=2, sticky=(W, E))
-
 opp = StringVar()
 opp_entry = ttk.Entry(mainframe, width=14, textvariable=opp)
 opp_entry.grid(column=2, row=3, sticky=(W, E))
 
+# Display result
 result = StringVar()
 ttk.Label(mainframe, textvariable=result).grid(column=2, row=4, sticky=(W, E))
 
-ttk.Button(mainframe, text="=", command=calculate).grid(column=3, row=4, sticky=W)
+# Data Entry through button, when clicked produces the result
+ttk.Button(mainframe, text="=", command=calculate).grid(column=3, row=3, sticky=W)
 
+# Labels for data entry and results
 ttk.Label(mainframe, text="Num 1").grid(column=1, row=1, sticky=W)
 ttk.Label(mainframe, text="Num 2").grid(column=1, row=2, sticky=W)
 ttk.Label(mainframe, text="Operator").grid(column=1, row=3, sticky=W)
